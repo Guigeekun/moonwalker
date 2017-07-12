@@ -37,3 +37,4 @@ ionic cordova run android
 ## Usefull links
 
 * [ionic documentation](https://ionicframework.com/docs/)
+* [Angular documenation](https://angular.io/)

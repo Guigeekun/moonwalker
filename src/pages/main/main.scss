@@ -1,0 +1,53 @@
+page-main {
+
+    .toolbar {
+        overflow: visible;
+        contain: layout;
+        color: #FFF;
+
+        .toolbar-background {
+            background-color: map-get($palette, color2);
+        }
+
+    }
+
+    .expedition-container {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 50%;
+        background-color:map-get($palette, color2);
+        width: 100px;
+        height: 100px;
+        align-items:center;
+        justify-content: center;
+    }
+
+    .expedition-button {
+        display: block;
+        width: 90px;
+        height: 90px;
+        border: 2px solid map-get($palette, color5);
+        border-radius: 50%;
+        background: #a7cfdf;
+        background: -moz-linear-gradient(top, #a7cfdf 0%, #23538a 100%);
+        background: -webkit-linear-gradient(top, #a7cfdf 0%,#23538a 100%);
+        background: linear-gradient(to bottom, #a7cfdf 0%,#23538a 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=0 );
+        font-size: 1.2em;
+        font-weight: bold;
+        text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7);
+
+        &:active {
+            background: #23538a;
+            background: -moz-linear-gradient(top, #23538a 0%, #a7cfdf 100%);
+            background: -webkit-linear-gradient(top, #23538a 0%,#a7cfdf 100%);
+            background: linear-gradient(to bottom, #23538a 0%,#a7cfdf 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23538a', endColorstr='#a7cfdf',GradientType=0 );
+        }
+
+    }
+}

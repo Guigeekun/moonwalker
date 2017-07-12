@@ -11,4 +11,10 @@ export class HomePage {
 
   }
 
+  goToMain()
+  {
+    this.navCtrl.setRoot('main');
+    //this.navCtrl.push('main');
+  }
+
 }
