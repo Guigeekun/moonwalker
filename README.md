@@ -1,24 +1,36 @@
-# MoonWalker
+# Moonwalker
 
 Manage and strategic game on moon exploration
 
 ## Requirements
 
-- nodejs >= 6.9.5
-- yarn >= 0.27.5
+* nodejs >= 6.9.5
+* yarn >= 0.27.5
+
+```bash
+npm install -g yarn cordova ionic
+```
 
 ## Installation
 
-    git clone git@git.nbcorp.fr:nightbringer/moonwalker.git
-    cd moonwalker
-    yarn install
+```bash
+git clone git@git.nbcorp.fr:nightbringer/moonwalker.git
+cd moonwalker
+yarn install
+```
+
+## Developement
+
+```bash
+ionic serve
+```
+
+Local: <http://localhost:8100>
 
 ## Build
 
-    yarn run server:dev
+```bash
+ionic cordova platform add android
+ionic cordova run android
+```
 
-Dev server at: <http://localhost:9000/>
-
-## Scaffolding
-
-<https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project>
