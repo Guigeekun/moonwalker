@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SharedComponentsModule } from '../components/shared-components.module';
+import { StoresModule } from '../stores/stores.module';
 
 
 
@@ -19,6 +20,7 @@ import { SharedComponentsModule } from '../components/shared-components.module';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     SharedComponentsModule,
+    StoresModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

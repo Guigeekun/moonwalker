@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Titanium } from '../../game-objects/resources/titanium';
+import { Store } from '@ngrx/store';
+import { Observable } from "rxjs/Observable";
 
 /**
  * Generated class for the TitaniumComponent component.
@@ -13,21 +15,22 @@ import { Titanium } from '../../game-objects/resources/titanium';
 })
 export class TitaniumComponent {
 
-  titanium: Titanium;
+  titanium: Observable<Titanium>;
+  total: number;
+  icon: String;
 
-  constructor() {
+  constructor(private store: Store<any>) {
     console.log('Hello TitaniumComponent Component');
     
-    this.titanium = new Titanium();
+    this.titanium = store.select('titanium');
+    /*this.titanium.subscribe(v => {
+      console.log(v);
+    });*/
 
   }
 
-  displayTotal(): number {
-    return this.titanium.getTotal();
-  }
-
-  displayIcon(): String {
-    return this.titanium.getIcon();
+  addTitanium(value: number){
+    this.store.dispatch({ type: 'ADD', payload: value });
   }
 
 }

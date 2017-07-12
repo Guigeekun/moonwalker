@@ -5,6 +5,7 @@ import { RareEarthComponent } from './rareearth/rareearth';
 import { HeliumComponent } from './helium/helium';
 import { EnergyComponent } from './energy/energy';
 import { IonicModule } from 'ionic-angular';
+import { StoresModule } from '../stores/stores.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { IonicModule } from 'ionic-angular';
     EnergyComponent
   ],
   imports: [
-      IonicModule
+      IonicModule,
+      StoresModule
   ],
     exports: [
       FooterComponent,

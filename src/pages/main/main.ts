@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { StoresModule } from '../../stores/stores.module';
+import { Store } from '@ngrx/store';
+import { Observable } from "rxjs/Observable";
+import { ResourcesRuntime } from '../../game-core/resources-runtime';
 
-/**
- * Generated class for the MainPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @IonicPage({
   name: 'main'
 })
@@ -16,7 +14,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MainPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  titanium: Observable<any>;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private store: Store<any>, runtime: ResourcesRuntime ) {
+
+    runtime.initRuntime();
+    
+    this.titanium = store.select('titanium');
+    /*this.titanium.subscribe(v => {
+      console.log(v);
+    });*/
   }
 
   ionViewDidLoad() {

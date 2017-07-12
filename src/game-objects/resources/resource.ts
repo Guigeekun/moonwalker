@@ -31,17 +31,15 @@ export default abstract class Resource {
     public sub(number: number)
     {
         let newTotal = this.total - number;
-        if(newTotal <= this.getMin()){
-            return false;
-        }else{
-            this.total = newTotal;
-            return true;
-        }
+        this.total = newTotal;
+        return this;
     }
 
     public add(number: number)
     {
-        return this.total + number;
+        let newTotal = this.total + number;
+        this.total = newTotal;
+        return this;
     }
 
     public isMaxed(): boolean
@@ -53,6 +51,7 @@ export default abstract class Resource {
     {
         return (this.total <= this.min);
     }
+
 
 
 

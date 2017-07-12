@@ -1,5 +1,5 @@
 <!-- Generated template for the TitaniumComponent component -->
-<div>
-  <img [src]="titanium.getIcon()" />
-  {{ displayTotal() }}
+<div (click)="addTitanium(500)">
+  <img [src]="(titanium|async)?.getIcon()" />
+  {{ (titanium|async)?.getTotal() }}
 </div>
