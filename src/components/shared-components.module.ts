@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FooterComponent } from './footer/footer';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicModule } from 'ionic-angular';
 
 @NgModule({
   declarations: [
