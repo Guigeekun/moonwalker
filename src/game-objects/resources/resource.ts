@@ -1,5 +1,5 @@
 
-abstract class Resource {
+export default abstract class Resource {
 
     protected name: String;
     protected total: number;
@@ -12,6 +12,10 @@ abstract class Resource {
         return this.name;
     }
 
+    public getTotal(): number {
+        return this.total;
+    }
+
     public getMax(): number {
         return this.max;
     }
@@ -22,7 +26,13 @@ abstract class Resource {
 
     public sub(number: number)
     {
-        return this.total - number;
+        let newTotal = this.total - number;
+        if(newTotal <= this.getMin()){
+            return false;
+        }else{
+            this.total = newTotal;
+            return true;
+        }
     }
 
     public add(number: number)

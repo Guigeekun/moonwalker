@@ -1,3 +1,4 @@
+import Resource from './resource';
 
 export default class Energy extends Resource {
 

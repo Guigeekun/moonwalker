@@ -1,4 +1,4 @@
-//import * as Assets from '../assets';
+import Resource from './resource';
 
 export default class RareEarths extends Resource {
 

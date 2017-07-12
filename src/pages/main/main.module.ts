@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
+import { SharedComponentsModule } from '../../components/shared-components.module';
 import { MainPage } from './main';
 
 @NgModule({
@@ -8,6 +9,7 @@ import { MainPage } from './main';
   ],
   imports: [
     IonicPageModule.forChild(MainPage),
+    SharedComponentsModule
   ],
   entryComponents: [
     MainPage
