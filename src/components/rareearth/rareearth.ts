@@ -16,7 +16,7 @@ export class RareEarthComponent {
   rareearth: RareEarths;
 
   constructor() {
-    console.log('Hello TitaniumComponent Component');
+    console.log('Hello RareEarthComponent Component');
     
     this.rareearth = new RareEarths();
 
