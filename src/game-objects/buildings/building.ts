@@ -1,4 +1,3 @@
-import Titanium from '../resources/titanium';
 
 abstract class Building {
 

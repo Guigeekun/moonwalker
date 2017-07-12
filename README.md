@@ -34,3 +34,6 @@ ionic cordova platform add android
 ionic cordova run android
 ```
 
+## Usefull links
+
+* [ionic documentation](https://ionicframework.com/docs/)
