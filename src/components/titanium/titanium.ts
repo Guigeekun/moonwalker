@@ -26,4 +26,8 @@ export class TitaniumComponent {
     return this.titanium.getTotal();
   }
 
+  displayIcon(): String {
+    return this.titanium.getIcon();
+  }
+
 }

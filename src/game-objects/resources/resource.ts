@@ -12,6 +12,10 @@ export default abstract class Resource {
         return this.name;
     }
 
+    public getIcon(): any {
+        return this.icon;
+    }
+
     public getTotal(): number {
         return this.total;
     }
