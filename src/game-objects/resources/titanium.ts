@@ -7,7 +7,7 @@ export class Titanium extends Resource {
         super();
         this.name = 'Titanium';
         this.total = 1000;
-        this.icon = 'assets/gameicon/other/ia.png';
+        this.icon = 'assets/gameicon/resource/titanium.png';
     }
 
 

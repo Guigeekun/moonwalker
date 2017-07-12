@@ -7,11 +7,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SharedComponentsModule } from '../components/shared-components.module';
+import { RareearthComponent } from '../components/rareearth/rareearth';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    RareearthComponent,
   ],
   imports: [
     BrowserModule,
