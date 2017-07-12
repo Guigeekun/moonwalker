@@ -16,5 +16,13 @@ export class HomePage {
     this.navCtrl.setRoot('main');
     //this.navCtrl.push('main');
   }
+  goToSettings()
+  {
+    this.navCtrl.push('settings');
+  }
+  goToAbout()
+  {
+    this.navCtrl.push('about');
+  }
 
 }

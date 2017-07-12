@@ -1,0 +1,10 @@
+page-about {
+    .content{
+        background-color: map-get($palette,color2);
+    }
+   
+    .aboutCard{
+        background-color: map-get($palette, color5);
+    }
+
+}
