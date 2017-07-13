@@ -53,7 +53,7 @@ export class ResourcesRuntime {
 
       if(this.heliumProductor){
         console.log('moar Helium');
-        this.store.dispatch({type:'HELIUM_ADD', payload: this.heliumProductor.rareEarthsIncome()});
+        this.store.dispatch({type:'HELIUM_ADD', payload: this.heliumProductor.heliumIncome()});
       }
 
     }, 1000);
