@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Helium } from '../../game-objects/resources/helium';
+import { RareEarths } from '../../game-objects/resources/rare-earths';
 import { Store } from '@ngrx/store';
 import { Observable } from "rxjs/Observable";
 
@@ -10,22 +10,20 @@ import { Observable } from "rxjs/Observable";
  * for more info on Angular Components.
  */
 @Component({
-  selector: 'helium',
-  templateUrl: 'helium.html'
+  selector: 'rare-earths',
+  templateUrl: 'rare-earths.html'
 })
-export class HeliumComponent {
+export class RareEarthsComponent {
 
- helium: Observable<Helium>;
+ rareEarths: Observable<RareEarths>;
   
   constructor(store: Store<any>) {
     console.log('Hello HeliumComponent Component');
     
-    this.helium = store.select('helium');
-    /*this.helium.subscribe(v => {
+    this.rareEarths = store.select('rareEarths');
+    /*this.rareEarths.subscribe(v => {
       console.log(v);
     });*/
 
   }
-
-
 }

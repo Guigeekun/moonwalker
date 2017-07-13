@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FooterComponent } from './footer/footer';
 import { TitaniumComponent } from './titanium/titanium';
-import { RareEarthComponent } from './rareearth/rareearth';
+import { RareEarthsComponent } from './rare-earths/rare-earths';
 import { HeliumComponent } from './helium/helium';
 import { EnergyComponent } from './energy/energy';
 import { IonicModule } from 'ionic-angular';
@@ -12,7 +12,7 @@ import { PipesModule } from '../pipes/pipes.module';
   declarations: [
     FooterComponent,
     TitaniumComponent,
-    RareEarthComponent,
+    RareEarthsComponent,
     HeliumComponent,
     EnergyComponent
   ],
@@ -24,7 +24,7 @@ import { PipesModule } from '../pipes/pipes.module';
     exports: [
       FooterComponent,
       TitaniumComponent,
-      RareEarthComponent,
+      RareEarthsComponent,
       HeliumComponent,
       EnergyComponent
   ]

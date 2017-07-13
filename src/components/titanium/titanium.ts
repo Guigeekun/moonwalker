@@ -16,8 +16,6 @@ import { Observable } from "rxjs/Observable";
 export class TitaniumComponent {
 
   titanium: Observable<Titanium>;
-  total: number;
-  icon: String;
 
   constructor(private store: Store<any>) {
     console.log('Hello TitaniumComponent Component');
@@ -27,10 +25,6 @@ export class TitaniumComponent {
       console.log(v);
     });*/
 
-  }
-
-  addTitanium(value: number){
-    this.store.dispatch({ type: 'ADD', payload: value });
   }
 
 }
