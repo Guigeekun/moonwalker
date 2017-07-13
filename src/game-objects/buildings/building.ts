@@ -75,4 +75,7 @@ export default abstract class Building {
      public heliumIncome(){
         return this.income.helium*this.level;
     }
+     public energyIncome(){
+        return this.income.energy*this.level;
+    }
 }
