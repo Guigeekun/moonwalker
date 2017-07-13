@@ -11,7 +11,7 @@ export class TitaniumExcavator extends Building {
        // this.buyingDescription = '...';
         this.mainDescription = 'Produce x Titanium per hours.';
         this.cost = {titanium:{a:500,b:-480},rareEarths:{a:0,b:0},helium:{a:0,b:0},energy:{a:5}}
-        this.income = {titanium:100/60,rareEarths:0,helium:0,energy:0};
+        this.income = {titanium:100/3600,rareEarths:0,helium:0,energy:0};
 
     }
 
