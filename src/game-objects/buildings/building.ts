@@ -15,20 +15,33 @@ export default abstract class Building {
     // Buy
     protected cost: {titanium:{a:number,b:number},rareEarths:{a:number,b:number},helium:{a:number,b:number},energy:{a:number}};
 
- public getLvl(): number {
-        return this.level;
+    public getName(): String {
+        return this.name;
     }
- public getNextLvl(): number {
-        return this.level+1;
+
+    public getId(): String {
+        return this.name.toLowerCase().replace(/-+/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
     }
-public getCost(): Object{
-        return this.cost;
-}
-public canBeBuilt(): boolean{
-    if (this.getLvl() == 10){
-        return false
-    }else{
-        return true
+
+    public getIcon(): string {
+        return this.icon;
+    }
+    public getLvl(): number {
+            return this.level;
+        }
+    public getNextLvl(): number {
+            return this.level+1;
+        }
+    public getCost(): Object{
+            return this.cost;
+    }
+    public canBeBuilt(): boolean{
+        if (this.getLvl() == 10){
+            return false
+        }else{
+            return true
+        }
+
     }
 }
 public titaniumCost(){

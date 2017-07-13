@@ -1,51 +1,12 @@
 <!-- Generated template for the GridBuildingsComponent component -->
   <ion-grid class="buildings">
-  <ion-row>
-    <ion-col>
-      <h2 class="level"><small>lvl</small>1</h2>
-      <img src="assets/buildings/factory.png" />
+  <ion-row wrap responsive-sm>
+    <ion-col *ngFor="let building of buildings | async">
+      <h2 class="level"><small>lvl</small>{{ building.getLvl() }}</h2>
+      <img [src]="building.getIcon()" />
     </ion-col>
     <ion-col>
-      <h2 class="level"><small>lvl</small>1</h2>
-      <img src="assets/buildings/hangar.png" />
-      
-    </ion-col>
-    <ion-col>
-      <h2 class="level"><small>lvl</small>1</h2>
-      <img src="assets/buildings/heliumproductor.png" />
-      
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <h2 class="level"><small>lvl</small>1</h2>
-      <img src="assets/buildings/laboratory.png" />
-      
-    </ion-col>
-    <ion-col>
-      <h2 class="level"><small>lvl</small>1</h2>
-      <img src="assets/buildings/powerplant.png" />
-      
-    </ion-col>
-    <ion-col>
-      <h2 class="level"><small>lvl</small>1</h2>
-      <img src="assets/buildings/rareearthsproductor.png" />
-      
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <h2 class="level"><small>lvl</small>1</h2>
-      <img src="assets/buildings/receptioncenter.png" />
-      
-    </ion-col>
-    <ion-col>
-      <h2 class="level"><small>lvl</small>1</h2>
-      <img src="assets/buildings/titaniumproductor.png" />
-      
-    </ion-col>
-    <ion-col>
-      <h2 class="newBuild">New Build</h2>
+      <button ion-button round (click)="createBuilding()">Create<br />building</button>
     </ion-col>
   </ion-row>
 </ion-grid>

@@ -9,7 +9,7 @@ page-main {
 
     .content {
         color: #FFF;
-        background: red url(../assets/game-background.jpg);
+        background: map-get($palette, color1) url(../assets/game-background.jpg);
     }
 
     .toolbar {
