@@ -1,5 +1,21 @@
 page-main {
 
+    color: #FFF;
+
+    .header {
+        color: #FFF;
+        vertical-align: middle;
+    }
+
+    .content {
+        color: #FFF;
+        background: red url(../assets/game-background.jpg);
+    }
+
+    .buildings {
+        margin-top: 150px;
+    }
+
     .toolbar {
         overflow: visible;
         contain: layout;
