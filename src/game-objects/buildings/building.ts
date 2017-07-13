@@ -1,5 +1,5 @@
 
-abstract class Building {
+export default abstract class Building {
 
     protected name: String;
     protected icon: any;
