@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { StoresModule } from '../../stores/stores.module';
 import { Store } from '@ngrx/store';
 import { Observable } from "rxjs/Observable";
@@ -14,23 +13,20 @@ import { IonicPage, NavController, NavParams, AlertController} from 'ionic-angul
   templateUrl: 'main.html',
 })
 export class MainPage {
+  testRadioResult: any;
+  testRadioOpen: boolean;
 
   titanium: Observable<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private store: Store<any>, runtime: ResourcesRuntime ) {
-
+  constructor(public navCtrl: NavController, public navParams: NavParams, private store: Store<any>, runtime: ResourcesRuntime, public alerCtrl: AlertController ) {
+  
     runtime.initRuntime();
     
     this.titanium = store.select('titanium');
     /*this.titanium.subscribe(v => {
       console.log(v);
     });*/
-  testRadioResult: any;
-  testRadioOpen: boolean;
-  
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alerCtrl: AlertController) {
   }
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainPage');
   }
