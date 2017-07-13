@@ -6,7 +6,7 @@ export class Laboratory extends Building {
     constructor(){
         super();
         this.name = 'Laboratory';
-        this.level = 0;
+        this.level = 1;
         this.icon = 'assets/buildings/laboratory.png';
        // this.buyingDescription = '...';
         this.mainDescription = 'Unlock the researchs.';

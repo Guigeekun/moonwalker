@@ -34,6 +34,7 @@ export class GridBuildingsComponent {
     new ReceptionCenter(),
   ];
   buildings: Observable<any>;
+  grid: Array<any> = [];
 
   constructor(private store: Store<any>, public alerCtrl: AlertController) {
     console.log('Hello GridBuildingsComponent Component');
@@ -47,6 +48,25 @@ export class GridBuildingsComponent {
           return element.getId() != building.getId()
         });
       });
+    });
+
+    // generate grid
+    this.buildings.subscribe(buildings => {
+        this.grid = [];
+        let length = buildings.length;
+        for (let i = 0; i < length; i += 3) {
+            let trio = [];
+            trio.push(buildings[i]);
+            if (i + 1 < length) {
+                trio.push(buildings[i + 1]);
+            }
+            if (i + 2 < length) {
+                trio.push(buildings[i + 2]);
+            }
+
+            this.grid.push(trio);
+        }
+        console.log(this.grid);
     });
 
     //store.dispatch({type: 'BUILDINGS_ADD', payload: new PowerPlant()});

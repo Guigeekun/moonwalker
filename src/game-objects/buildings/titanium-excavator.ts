@@ -6,7 +6,7 @@ export class TitaniumExcavator extends Building {
     constructor(){
         super();
         this.name = 'Titanium excavator';
-        this.level = 0;
+        this.level = 1;
         this.icon = 'assets/buildings/titaniumproductor.png';
        // this.buyingDescription = '...';
         this.mainDescription = 'Produce x Titanium per hours.';

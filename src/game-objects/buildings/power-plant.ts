@@ -6,7 +6,7 @@ export class PowerPlant extends Building {
     constructor(){
         super();
         this.name = 'PowerPlant';
-        this.level = 0;
+        this.level = 1;
         this.icon = 'assets/buildings/powerplant.png';
        // this.buyingDescription = '...';
         this.mainDescription = 'Produce x Energy.';

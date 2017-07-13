@@ -1,12 +1,10 @@
 <!-- Generated template for the GridBuildingsComponent component -->
+<button ion-button round (click)="createBuilding()">Create<br />building</button>
   <ion-grid class="buildings">
-  <ion-row wrap responsive-sm>
-    <ion-col *ngFor="let building of buildings | async">
+    <ion-row *ngFor="let row of grid">
+    <ion-col *ngFor="let building of row">
       <h2 class="level"><small>lvl</small>{{ building.getLvl() }}</h2>
       <img [src]="building.getIcon()" />
-    </ion-col>
-    <ion-col>
-      <button ion-button round (click)="createBuilding()">Create<br />building</button>
     </ion-col>
   </ion-row>
 </ion-grid>

@@ -6,7 +6,7 @@ export class heliumProductor extends Building {
     constructor(){
         super();
         this.name = 'Helium productor';
-        this.level = 0;
+        this.level = 1;
         this.icon = 'assets/buildings/heliumproductor.png';
        // this.buyingDescription = '...';
         this.mainDescription = 'Produce x Helium per hours.';

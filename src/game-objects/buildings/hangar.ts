@@ -6,7 +6,7 @@ export class Hangar extends Building {
     constructor(){
         super();
         this.name = 'Hangar';
-        this.level = 0;
+        this.level = 1;
         this.icon = 'assets/buildings/hangar.png';
        // this.buyingDescription = '...';
         this.mainDescription = 'Unlock the Rover modification and enhance it.';

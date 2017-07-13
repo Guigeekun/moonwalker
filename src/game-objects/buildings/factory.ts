@@ -6,7 +6,7 @@ export class Factory extends Building {
     constructor(){
         super();
         this.name = 'Factory';
-        this.level = 0;
+        this.level = 1;
         this.icon = 'assets/buildings/factory.png';
        // this.buyingDescription = '...';
         this.mainDescription = 'Unlock the factory and blueprints.';

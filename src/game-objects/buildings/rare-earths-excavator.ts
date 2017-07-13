@@ -6,7 +6,7 @@ export class RareEarthsExcavator extends Building {
     constructor(){
         super();
         this.name = 'Rare earths excavator';
-        this.level = 0;
+        this.level = 1;
         this.icon = 'assets/buildings/rareearthsproductor.png';
        // this.buyingDescription = '...';
         this.mainDescription = 'Produce x Rare earths per hours.';

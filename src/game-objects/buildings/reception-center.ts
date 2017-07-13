@@ -6,7 +6,7 @@ export class ReceptionCenter extends Building {
     constructor(){
         super();
         this.name = 'Reception center';
-        this.level = 0;
+        this.level = 1;
         this.icon = 'assets/buildings/receptioncenter.png';
        // this.buyingDescription = '...';
         this.mainDescription = 'Allows you to trade items.';
