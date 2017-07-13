@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { StoresModule } from '../../stores/stores.module';
 import { Store } from '@ngrx/store';
 import { Observable } from "rxjs/Observable";
 import { ResourcesRuntime } from '../../game-core/resources-runtime';
@@ -18,7 +17,7 @@ export class MainPage {
 
   titanium: Observable<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private store: Store<any>, runtime: ResourcesRuntime, public alerCtrl: AlertController ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, store: Store<any>, runtime: ResourcesRuntime, public alerCtrl: AlertController ) {
   
     runtime.initRuntime();
     

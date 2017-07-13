@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-import { StoresModule } from '../stores/stores.module';
 import { Store } from '@ngrx/store';
-import { Observable } from "rxjs/Observable";
 
 @Injectable()
 export class ResourcesRuntime {
