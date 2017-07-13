@@ -10,6 +10,8 @@ export class ReceptionCenter extends Building {
         this.icon = 'assets/building/receptioncenter.png';
        // this.buyingDescription = '...';
         this.mainDescription = 'Allows you to trade items.';
+        this.cost = {titanium:{a:300,b:0},rareEarths:{a:100,b:0},helium:{a:20,b:0},energy:{a:0}};
+
     }
 
 

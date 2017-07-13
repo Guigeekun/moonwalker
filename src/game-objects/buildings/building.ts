@@ -6,6 +6,7 @@ export default abstract class Building {
     protected buyingDescription: String;
     protected mainDescription: String;
     protected level: number;
+    protected id: number;
 
     //
     protected buildingTime: Object;
@@ -29,7 +30,18 @@ public canBeBuilt(): boolean{
     }else{
         return true
     }
-
+}
+public titaniumCost(){
+    return this.cost.titanium.a*this.getNextLvl()+this.cost.titanium.b;
+}
+public rareEarthsCost(){
+    return this.cost.rareEarths.a*this.getNextLvl()+this.cost.rareEarths.b;
+}
+public heliumCost(){
+    return this.cost.helium.a*this.getNextLvl()+this.cost.helium.b;
+}
+public energyCost(){
+    return this.cost.energy.a*this.getNextLvl();
 }
 
 }
