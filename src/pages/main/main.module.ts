@@ -3,6 +3,7 @@ import { IonicPageModule } from 'ionic-angular';
 import { SharedComponentsModule } from '../../components/shared-components.module';
 import { MainPage } from './main';
 import { ResourcesRuntime } from '../../game-core/resources-runtime';
+import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { ResourcesRuntime } from '../../game-core/resources-runtime';
   ],
   imports: [
     IonicPageModule.forChild(MainPage),
-    SharedComponentsModule
+    SharedComponentsModule,
+    PipesModule
   ],
   entryComponents: [
     MainPage

@@ -8,6 +8,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SharedComponentsModule } from '../components/shared-components.module';
 import { StoresModule } from '../stores/stores.module';
+import { PipesModule } from '../pipes/pipes.module';
+
 
 
 
@@ -20,7 +22,8 @@ import { StoresModule } from '../stores/stores.module';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     SharedComponentsModule,
-    StoresModule
+    StoresModule,
+    PipesModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

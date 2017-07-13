@@ -1,5 +1,5 @@
 <!-- Generated template for the TitaniumComponent component -->
 <div (click)="addTitanium(500)">
   <img [src]="(titanium|async)?.getIcon()" />
-  {{ (titanium|async)?.getTotal() }}
+  {{ (titanium|async)?.getTotal() | MetricSuffix:3 }}
 </div>

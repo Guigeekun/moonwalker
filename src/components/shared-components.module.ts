@@ -6,6 +6,7 @@ import { HeliumComponent } from './helium/helium';
 import { EnergyComponent } from './energy/energy';
 import { IonicModule } from 'ionic-angular';
 import { StoresModule } from '../stores/stores.module';
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { StoresModule } from '../stores/stores.module';
   ],
   imports: [
       IonicModule,
-      StoresModule
+      StoresModule,
+      PipesModule
   ],
     exports: [
       FooterComponent,
