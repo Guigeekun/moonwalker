@@ -1,0 +1,5 @@
+<!-- Generated template for the RareearthComponent component -->
+<div>
+  <img [src]="(rareEarths|async)?.getIcon()" />
+  {{ (rareEarths|async)?.getTotal() | MetricSuffix:3 }}
+</div>

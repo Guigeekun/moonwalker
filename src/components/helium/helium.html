@@ -1,5 +1,5 @@
 <!-- Generated template for the TitaniumComponent component -->
 <div>
-  <img [src]="helium.getIcon()" />
-  {{ displayTotal() }}
+  <img [src]="(helium|async)?.getIcon()" />
+  {{ (helium|async)?.getTotal() | MetricSuffix:3 }}
 </div>

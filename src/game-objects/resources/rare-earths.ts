@@ -7,7 +7,7 @@ export class RareEarths extends Resource {
         super();
         this.name = 'Rare Earths';
         this.total = 30;
-        this.icon = 'assets/gameicon/resource/rareearth.png';
+        this.icon = 'assets/gameicon/resource/rareearths.png';
     }
 
 

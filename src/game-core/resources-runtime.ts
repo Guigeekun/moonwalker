@@ -11,8 +11,9 @@ export class ResourcesRuntime {
   {
       console.log('Init resourcesRuntime');
     setInterval(() => {
-        this.store.select('titanium');
-        this.store.dispatch({type:'ADD', payload: 10});
+        this.store.dispatch({type:'TITANIUM_ADD', payload: 10});
+        this.store.dispatch({type:'RAREEARTHS_ADD', payload: 7});
+        this.store.dispatch({type:'HELIUM_ADD', payload: 5});
     }, 1000);
   }
 }

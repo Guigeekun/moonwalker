@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Energy } from '../../game-objects/resources/energy';
+import { Store } from '@ngrx/store';
+import { Observable } from "rxjs/Observable";
 
 /**
  * Generated class for the EnergyComponent component.
@@ -13,21 +15,17 @@ import { Energy } from '../../game-objects/resources/energy';
 })
 export class EnergyComponent {
 
-  energy: Energy;
-
-  constructor() {
-    console.log('Hello EnergyComponent Component');
+ energy: Observable<Energy>;
+  
+  constructor(store: Store<any>) {
+    console.log('Hello HeliumComponent Component');
     
-    this.energy = new Energy();
+    this.energy = store.select('energy');
+    /*this.helium.subscribe(v => {
+      console.log(v);
+    });*/
 
   }
 
-  displayTotal(): number {
-    return this.energy.getTotal();
-  }
-
-  displayIcon(): String {
-    return this.energy.getIcon();
-  }
 
 }
