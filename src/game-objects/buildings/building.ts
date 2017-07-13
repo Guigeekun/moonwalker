@@ -24,11 +24,12 @@ public getCost(): Object{
         return this.cost;
 }
 public canBeBuilt(): boolean{
-    if (this.getLvl = 10){
+    if (this.getLvl() == 10){
         return false
     }else{
         return true
     }
 
 }
+
 }
