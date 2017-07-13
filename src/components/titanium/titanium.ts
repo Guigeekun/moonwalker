@@ -17,7 +17,7 @@ export class TitaniumComponent {
 
   titanium: Observable<Titanium>;
 
-  constructor(private store: Store<any>) {
+  constructor(store: Store<any>) {
     console.log('Hello TitaniumComponent Component');
     
     this.titanium = store.select('titanium');
