@@ -2,5 +2,5 @@
 <div>
   <img [src]="(titanium|async)?.getIcon()" />
   <br>
-  {{ (titanium|async)?.getTotal() | MetricSuffix:3 }}
+  {{ (titanium|async)?.getTotal() | number:'1.0-0' | MetricSuffix:3 }}
 </div>

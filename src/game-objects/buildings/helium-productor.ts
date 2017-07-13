@@ -1,7 +1,7 @@
 import Building from './building';
 
 
-export class heliumProductor extends Building {
+export class HeliumProductor extends Building {
 
     constructor(){
         super();

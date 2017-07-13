@@ -2,5 +2,5 @@
 <div>
   <img [src]="(energy|async)?.getIcon()" />
   <br>
-  {{ (energy|async)?.getTotal() | MetricSuffix:3 }}
+  {{ (energy|async)?.getTotal() | number:'1.0-0' | MetricSuffix:3 }}
 </div>

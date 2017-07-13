@@ -2,5 +2,5 @@
 <div>
   <img [src]="(rareEarths|async)?.getIcon()" />
   <br>
-  {{ (rareEarths|async)?.getTotal() | MetricSuffix:3 }}
+  {{ (rareEarths|async)?.getTotal() | number:'1.0-0' | MetricSuffix:3 }}
 </div>

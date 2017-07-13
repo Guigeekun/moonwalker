@@ -5,7 +5,7 @@ import { Observable } from "rxjs/Observable";
 import { PowerPlant } from '../../game-objects/buildings/power-plant';
 import { Factory } from '../../game-objects/buildings/factory';
 import { Hangar } from '../../game-objects/buildings/hangar';
-import { heliumProductor } from '../../game-objects/buildings/helium-productor';
+import { HeliumProductor } from '../../game-objects/buildings/helium-productor';
 import { Laboratory } from '../../game-objects/buildings/laboratory';
 import { RareEarthsExcavator } from '../../game-objects/buildings/rare-earths-excavator';
 import { ReceptionCenter } from '../../game-objects/buildings/reception-center';
@@ -27,7 +27,7 @@ export class GridBuildingsComponent {
     new PowerPlant(),
     new TitaniumExcavator(),
     new RareEarthsExcavator(),
-    new heliumProductor(),
+    new HeliumProductor(),
     new Factory(),
     new Hangar(),
     new Laboratory(),
