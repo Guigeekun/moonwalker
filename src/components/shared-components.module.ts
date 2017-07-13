@@ -7,6 +7,7 @@ import { EnergyComponent } from './energy/energy';
 import { IonicModule } from 'ionic-angular';
 import { StoresModule } from '../stores/stores.module';
 import { PipesModule } from '../pipes/pipes.module';
+import { GridBuildingsComponent } from './grid-buildings/grid-buildings';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PipesModule } from '../pipes/pipes.module';
     TitaniumComponent,
     RareEarthsComponent,
     HeliumComponent,
-    EnergyComponent
+    EnergyComponent,
+    GridBuildingsComponent
   ],
   imports: [
       IonicModule,
@@ -26,7 +28,8 @@ import { PipesModule } from '../pipes/pipes.module';
       TitaniumComponent,
       RareEarthsComponent,
       HeliumComponent,
-      EnergyComponent
+      EnergyComponent,
+      GridBuildingsComponent
   ]
 })
 export class SharedComponentsModule {}
