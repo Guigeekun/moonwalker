@@ -11,6 +11,8 @@ export class PowerPlant extends Building {
        // this.buyingDescription = '...';
         this.mainDescription = 'Produce x Energy.';
         this.cost = {titanium:{a:650,b:-610},rareEarths:{a:150,b:130},helium:{a:0,b:0},energy:{a:0}};
+        this.income = {titanium:0,rareEarths:0,helium:0,energy:15};
+
 
     }
 
