@@ -40,19 +40,19 @@ export class ResourcesRuntime {
 
     
     setInterval(() => {
-
+      console.log('resources tick')
       if(this.titaniumExcavator){
-        console.log('moar titanium');
+        //console.log('moar titanium');
         this.store.dispatch({type:'TITANIUM_ADD', payload: this.titaniumExcavator.titaniumIncome()});
       }
 
       if(this.rareEarthsExcavator){
-        console.log('moar rareEarths');
+        //console.log('moar rareEarths');
         this.store.dispatch({type:'RAREEARTHS_ADD', payload: this.rareEarthsExcavator.rareEarthsIncome()});
       }
 
       if(this.heliumProductor){
-        console.log('moar Helium');
+        //console.log('moar Helium');
         this.store.dispatch({type:'HELIUM_ADD', payload: this.heliumProductor.heliumIncome()});
       }
 

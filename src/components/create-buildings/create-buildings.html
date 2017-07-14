@@ -15,10 +15,19 @@
 
 <ion-content>
   <ion-list>
-      <ion-item>
+      <button ion-item *ngFor="let building of allBuildings" (click)="build(building)">
         <ion-avatar item-start>
+          <img [src]="building.getIcon()" />
         </ion-avatar>
-
-      </ion-item>
+        <h2>{{ building.getName() }}</h2>
+        <p>{{ building.getDescription() }}</p>
+        <p>
+        <ion-badge *ngIf="building.titaniumCost() > 0" >{{ building.titaniumCost() }}T</ion-badge>
+        <ion-badge *ngIf="building.rareEarthsCost() > 0">{{ building.rareEarthsCost() }}RE</ion-badge>
+        <ion-badge *ngIf="building.heliumCost() > 0">{{ building.heliumCost() }}H</ion-badge>
+        <ion-badge *ngIf="building.energyCost() > 0">{{ building.energyCost() }}E</ion-badge>
+        </p>
+        <ion-badge color="secondary" item-end>BUILD</ion-badge>
+      </button>
   </ion-list>
 </ion-content>

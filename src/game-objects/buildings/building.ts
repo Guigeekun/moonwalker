@@ -24,6 +24,10 @@ export default abstract class Building {
         return this.name;
     }
 
+     public getDescription(): String {
+        return this.mainDescription;
+    }
+
     public getId(): String {
         return this.name.toLowerCase().replace(/-+/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
     }

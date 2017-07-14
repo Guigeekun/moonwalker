@@ -15,16 +15,11 @@ export class MainPage {
   testRadioResult: any;
   testRadioOpen: boolean;
 
-  titanium: Observable<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, store: Store<any>, runtime: ResourcesRuntime, public alerCtrl: AlertController ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, runtime: ResourcesRuntime, public alerCtrl: AlertController ) {
   
     runtime.initRuntime();
-    
-    this.titanium = store.select('titanium');
-    /*this.titanium.subscribe(v => {
-      console.log(v);
-    });*/
+
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainPage');
