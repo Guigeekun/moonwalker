@@ -71,15 +71,51 @@ export default abstract class Building {
     }
 
     public titaniumIncome(){
+        if(this.income){
         return this.income.titanium*this.level;
+        }
+    return 0;
     }
      public rareEarthsIncome(){
+        if(this.income){
         return this.income.rareEarths*this.level;
+            }
+         return 0;
     }
      public heliumIncome(){
-        return this.income.helium*this.level;
+         if(this.income){
+          return this.income.helium*this.level;
+         }
+         return 0;
     }
      public energyIncome(){
-        return this.income.energy*this.level;
+        if(this.income){
+            return this.income.energy*this.level;
+        }
+        return 0;
+    }
+    public titaniumNextIncome(){
+        if(this.income){
+            return this.income.titanium*this.getNextLvl();
+        }
+        return 0;
+    }
+     public rareEarthsNextIncome(){
+            if(this.income){
+        return this.income.rareEarths*this.getNextLvl();
+            }
+    return 0;
+    }
+     public heliumNextIncome(){
+            if(this.income){
+        return this.income.helium*this.getNextLvl();
+            }
+    return 0;
+    }
+     public energyNextIncome(){
+            if(this.income){
+        return this.income.energy*this.getNextLvl();
+            }
+    return 0
     }
 }
