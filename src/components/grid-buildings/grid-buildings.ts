@@ -3,6 +3,14 @@ import { AlertController, ModalController } from 'ionic-angular';
 import { Store } from '@ngrx/store';
 import { Observable } from "rxjs/Observable";
 import { CreateBuildingsComponent } from '../create-buildings/create-buildings';
+import { PowerPlant } from '../../game-objects/buildings/power-plant';
+import { Factory } from '../../game-objects/buildings/factory';
+import { Hangar } from '../../game-objects/buildings/hangar';
+import { HeliumProductor } from '../../game-objects/buildings/helium-productor';
+import { Laboratory } from '../../game-objects/buildings/laboratory';
+import { RareEarthsExcavator } from '../../game-objects/buildings/rare-earths-excavator';
+import { ReceptionCenter } from '../../game-objects/buildings/reception-center';
+import { TitaniumExcavator } from '../../game-objects/buildings/titanium-excavator';
 
 /**
  * Generated class for the GridBuildingsComponent component.
@@ -16,6 +24,16 @@ import { CreateBuildingsComponent } from '../create-buildings/create-buildings';
 })
 export class GridBuildingsComponent implements OnInit {
 
+  allBuildings: any[] = [
+    new PowerPlant(),
+    new TitaniumExcavator(),
+    new RareEarthsExcavator(),
+    new HeliumProductor(),
+    new Factory(),
+    new Hangar(),
+    new Laboratory(),
+    new ReceptionCenter(),
+  ];
   buildings: Observable<any>;
   grid: Array<any> = [];
 
@@ -29,6 +47,19 @@ export class GridBuildingsComponent implements OnInit {
     console.log('grid load');
     // grid
     this.buildings = this.store.select('gridbuildings');
+
+
+     // remove already built buildings to available list
+    this.buildings.subscribe(alreadyBuildings => {
+      console.log(alreadyBuildings);
+      console.log('buildings list');
+      alreadyBuildings.forEach(building => {
+        this.allBuildings = this.allBuildings.filter(element => {
+          return element.getId() != building.getId()
+        });
+      });
+    });
+
     // generate grid
     this.buildings.subscribe(buildings => {
         console.log('rebuild grid');
@@ -52,10 +83,12 @@ export class GridBuildingsComponent implements OnInit {
 
   createBuilding() {
 
-    let createModal = this.modalCtrl.create(CreateBuildingsComponent);
+    let createModal = this.modalCtrl.create(CreateBuildingsComponent, {allBuildings: this.allBuildings});
     createModal.onDidDismiss(selectedBuilding => {
      console.log(selectedBuilding);
-     this.store.dispatch({type: 'BUILDINGS_ADD', payload: selectedBuilding})
+     if(selectedBuilding){
+      this.store.dispatch({type: 'BUILDINGS_ADD', payload: selectedBuilding});
+     }
     });
     createModal.present();
     /**let alert = this.alerCtrl.create();
