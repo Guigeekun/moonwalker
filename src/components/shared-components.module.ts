@@ -8,6 +8,8 @@ import { IonicModule } from 'ionic-angular';
 import { StoresModule } from '../stores/stores.module';
 import { PipesModule } from '../pipes/pipes.module';
 import { GridBuildingsComponent } from './grid-buildings/grid-buildings';
+import { CreateBuildingsComponent } from './create-buildings/create-buildings';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { GridBuildingsComponent } from './grid-buildings/grid-buildings';
     RareEarthsComponent,
     HeliumComponent,
     EnergyComponent,
-    GridBuildingsComponent
+    GridBuildingsComponent,
+    CreateBuildingsComponent
   ],
   imports: [
       IonicModule,
@@ -29,7 +32,12 @@ import { GridBuildingsComponent } from './grid-buildings/grid-buildings';
       RareEarthsComponent,
       HeliumComponent,
       EnergyComponent,
-      GridBuildingsComponent
+      GridBuildingsComponent,
+      CreateBuildingsComponent
+  ],
+  entryComponents: [
+      CreateBuildingsComponent
+    
   ]
 })
 export class SharedComponentsModule {}

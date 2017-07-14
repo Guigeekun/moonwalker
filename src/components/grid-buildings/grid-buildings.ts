@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AlertController} from 'ionic-angular';
+import { AlertController, ModalController } from 'ionic-angular';
 import { Store } from '@ngrx/store';
 import { Observable } from "rxjs/Observable";
 import { PowerPlant } from '../../game-objects/buildings/power-plant';
@@ -10,6 +10,7 @@ import { Laboratory } from '../../game-objects/buildings/laboratory';
 import { RareEarthsExcavator } from '../../game-objects/buildings/rare-earths-excavator';
 import { ReceptionCenter } from '../../game-objects/buildings/reception-center';
 import { TitaniumExcavator } from '../../game-objects/buildings/titanium-excavator';
+import { CreateBuildingsComponent } from '../create-buildings/create-buildings';
 
 /**
  * Generated class for the GridBuildingsComponent component.
@@ -36,7 +37,7 @@ export class GridBuildingsComponent {
   buildings: Observable<any>;
   grid: Array<any> = [];
 
-  constructor(private store: Store<any>, public alerCtrl: AlertController) {
+  constructor(store: Store<any>, public alerCtrl: AlertController, public modalCtrl: ModalController) {
     console.log('Hello GridBuildingsComponent Component');
 
     this.buildings = store.select('gridbuildings');
@@ -73,7 +74,10 @@ export class GridBuildingsComponent {
   }
 
   createBuilding() {
-        let alert = this.alerCtrl.create();
+
+    let createModal = this.modalCtrl.create(CreateBuildingsComponent, { userId: 8675309 });
+    createModal.present();
+    /**let alert = this.alerCtrl.create();
     alert.setTitle('New buildings');
 
     this.allBuildings.forEach(element => {
@@ -99,7 +103,7 @@ export class GridBuildingsComponent {
       }
     });
 
-    alert.present();
+    alert.present();*/
   }
 
 }

@@ -12,8 +12,6 @@ import { PipesModule } from '../pipes/pipes.module';
 
 
 
-
-
 @NgModule({
   declarations: [
     MyApp,
